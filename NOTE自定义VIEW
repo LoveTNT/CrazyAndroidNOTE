@@ -54,3 +54,59 @@ UI组件来说，都继承了view组件，然后在组件提供的空白区域�
     }
   
   }
+
+
+
+  继承view 重写ondraw（）  onTouchEvent事件（）
+
+  自定义组件后 通过java代码添加到指定的容器中
+
+  CustomViewActivity extends Activity{
+
+        //
+        //
+        .
+        .
+        .
+
+       //获取布局文件的LinearLayout容器
+       
+       LinearLayout root =(LinearLayout)findViewById(R.id.root);
+
+       //创建DrawView组件
+
+       final DrawView drwa =new DrwaView(this);
+
+       //set myselfview 最小宽度，高度
+
+       draw.setMinimunWidth(300);
+       drwa.setMinimunHeight(500);
+
+       root.addview(root);
+
+  }
+
+
+
+  xml--------------------中不是代码写  android官方推荐
+
+   linearLayout
+
+      <包名
+        match_parent
+
+
+
+    OK
+
+
+    
+
+
+
+
+
+
+
+
+
