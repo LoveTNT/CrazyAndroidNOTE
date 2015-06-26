@@ -1,0 +1,56 @@
+crazy android
+
+开发view
+
+UI组件来说，都继承了view组件，然后在组件提供的空白区域上来绘制外观
+
+		派发自己的组件时  
+
+
+  public  class DrawView extends View{
+
+   	float currentX =40；
+   	float currentY =50；
+
+   	//定义创建画笔
+    Paint p= new paint();
+
+    public DrawView(Content content){
+ 		super(content);
+    }
+    public DrawView(Content content AttributeSet set){
+    	super(content set);
+    }
+
+
+    @override
+    public void onDraw(Canvas canvas){
+        super.onDraw(canvans);
+
+        //设置画笔颜色
+        p.setColor(Color.RED);
+
+        //绘制一个小圆
+
+        canvas.drawCircle(currentX,currentY,15,p);
+
+    }
+
+
+    //set ontouch event
+
+    @override
+    public boolean onTouchEvent(MotionEvent ,event){
+
+         //change current x   y attibution
+
+         currentX=event.getX();
+         currentY=event.getY();
+         //通知当前组件重绘自己
+         invalidate();
+
+         return ture;
+
+    }
+  
+  }
